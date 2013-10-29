@@ -10,3 +10,4 @@
 * Install gEDA
 * Copy footprints and symbols to gEDA librar folder
 * edit schematic with gschem
+* 
