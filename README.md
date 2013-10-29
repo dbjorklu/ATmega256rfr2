@@ -11,25 +11,25 @@
 
 * Configure gEDA
 
-Enable automatic numbering in gschem by adding the following to .gEDA/gschemrc  
+Enable automatic numbering in gschem by adding the following to .gEDA/gschemrc
 
-'''
+```
 (load (string-append geda-data-path "/scheme/auto-uref.scm")) ; load the autonumbering script
 (add-hook! add-component-hook auto-uref)       ; autonumber when adding a component
 (add-hook! copy-component-hook auto-uref)      ; autonumber when copying a component
-'''
+```
 
 Add folder that contains symbols to .gEDA/gafrc so you can find them in gschem and use them with gsch2pcb:
 
-'''
+```
 (component-library "symbols/sym/")
-(component-library "symbols/fp/")  
-'''
+(component-library "symbols/fp/")
+```
 
 Start pcb and edit Element Directories under Settings/Library, add the directory where pcb footprints are located.
 
 
-'''
-(component-library "symbols/fp/")  
-'''
+```
+(component-library "symbols/fp/")
+```
 
