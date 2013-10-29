@@ -33,3 +33,10 @@ Start pcb and edit Element Directories under Settings/Library, add the directory
 (component-library "symbols/fp/")
 ```
 
+* Generate pcb file from schematic file:
+
+```
+gsch2pcb -d symbols/fp/ sch/256rfr2.sch
+```
+
+Follow instructions from gsch2pcb to load netlist.
