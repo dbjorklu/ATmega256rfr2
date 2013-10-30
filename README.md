@@ -19,7 +19,8 @@ Enable automatic numbering in gschem by adding the following to ~/.gEDA/gschemrc
 (add-hook! copy-component-hook auto-uref)      ; autonumber when copying a component
 ```
 
-Add the folder that contains symbols to ~/.gEDA/gafrc so you can find them in gschem and use them with gsch2pcb:
+Add the folder that contains symbols to ~/.gEDA/gafrc so you can find them in gschem and use them with gsch2pcb,
+e.g. (if this project is located in /home/user/ATmega256rfr2:)
 
 ```
 (component-library "/home/user/ATmega256rfr2/symbols/sym/")
