@@ -11,7 +11,7 @@
 
 * Configure gEDA
 
-Enable automatic numbering in gschem by adding the following to .gEDA/gschemrc
+Enable automatic numbering in gschem by adding the following to ~/.gEDA/gschemrc
 
 ```
 (load (string-append geda-data-path "/scheme/auto-uref.scm")) ; load the autonumbering script
@@ -19,19 +19,13 @@ Enable automatic numbering in gschem by adding the following to .gEDA/gschemrc
 (add-hook! copy-component-hook auto-uref)      ; autonumber when copying a component
 ```
 
-Add folder that contains symbols to .gEDA/gafrc so you can find them in gschem and use them with gsch2pcb:
+Add the folder that contains symbols to ~/.gEDA/gafrc so you can find them in gschem and use them with gsch2pcb:
 
 ```
-(component-library "symbols/sym/")
-(component-library "symbols/fp/")
+(component-library "/home/user/ATmega256rfr2/symbols/sym/")
+(component-library "/home/user/ATmega256rfr2/symbols/fp/")
 ```
 
-Start pcb and edit Element Directories under Settings/Library, add the directory where pcb footprints are located.
-
-
-```
-(component-library "symbols/fp/")
-```
 
 * Generate pcb file from schematic file:
 
