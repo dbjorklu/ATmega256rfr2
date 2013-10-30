@@ -56,6 +56,8 @@ T 62125 44775 5 10 0 0 270 0 1
 device=Battery
 T 60975 44525 5 10 1 1 0 3 1
 refdes=B2
+T 60425 44775 5 10 0 0 0 0 1
+footprint=battery_holder.fp
 }
 C 60425 44775 1 0 0 vcc-1.sym
 C 60525 43775 1 0 0 gnd-1.sym
