@@ -37,6 +37,8 @@ T 59175 44525 5 10 1 1 0 3 1
 refdes=B1
 T 60325 44775 5 10 0 0 270 0 1
 device=Battery
+T 58625 44775 5 10 0 0 0 0 1
+footprint=keystone_103.fp
 }
 C 58625 44775 1 0 0 vcc-1.sym
 C 58725 43775 1 0 0 gnd-1.sym
