@@ -40,3 +40,11 @@ gsch2pcb -d symbols/fp/ sch/256rfr2.sch
 ```
 
 Follow instructions from gsch2pcb to load netlist.
+
+## PCB design rules
+The following are the rules that OSHpark provides:
+* 6 mil minimum trace width
+* 6 mil minimum spacing
+* at least 15 mil clearances from traces to the edge of the board
+* 13 mil minimum drill size
+* 7 mil minimum annular ring
