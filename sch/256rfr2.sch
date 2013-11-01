@@ -132,6 +132,8 @@ T 48900 45725 5 10 0 0 180 0 1
 device=Capacitor
 T 48150 46725 5 10 1 1 0 2 1
 value=12pf
+T 48900 47225 5 10 0 0 0 0 1
+footprint=0402
 }
 C 49200 46825 1 0 0 capacitor-1.sym
 {
@@ -196,28 +198,28 @@ C 56800 37300 1 0 0 input-1.sym
 T 56800 37600 5 10 0 0 0 0 1
 device=INPUT
 T 56800 37300 5 10 1 1 0 0 1
-netname=SDA
+net=SDA:1
 }
 C 60000 36900 1 180 0 input-1.sym
 {
 T 60000 36600 5 10 0 0 180 0 1
 device=INPUT
 T 59600 36700 5 10 1 1 0 0 1
-netname=SCL
+net=SCL:1
 }
 C 49300 38300 1 270 1 input-1.sym
 {
 T 49600 38300 5 10 0 0 90 2 1
 device=INPUT
 T 49325 38300 5 10 1 1 90 2 1
-netname=SDA
+net=SDA:1
 }
 C 49200 38300 1 90 0 input-1.sym
 {
 T 48900 38300 5 10 0 0 90 0 1
 device=INPUT
 T 49175 38300 5 10 1 1 90 0 1
-netname=SCL
+net=SCL:1
 }
 C 61000 36900 1 90 0 capacitor-1.sym
 {
@@ -306,35 +308,35 @@ C 40850 47700 1 0 0 input-1.sym
 T 40850 48000 5 10 0 0 0 0 1
 device=INPUT
 T 40850 47700 5 10 1 1 0 0 1
-netname=TCK
+net=TCK:1
 }
 C 40850 47100 1 0 0 input-1.sym
 {
 T 40850 47400 5 10 0 0 0 0 1
 device=INPUT
 T 40850 47100 5 10 1 1 0 0 1
-netname=TDO
+net=TDO:1
 }
 C 40850 46500 1 0 0 input-1.sym
 {
 T 40850 46800 5 10 0 0 0 0 1
 device=INPUT
 T 40850 46500 5 10 1 1 0 0 1
-netname=TMS
+net=TMS:1
 }
 C 44050 47900 1 180 0 input-1.sym
 {
 T 44050 47600 5 10 0 0 180 0 1
 device=INPUT
 T 44050 47900 5 10 1 1 180 0 1
-netname=RST
+net=RST:1
 }
 C 44050 47000 1 180 0 input-1.sym
 {
 T 44050 46700 5 10 0 0 180 0 1
 device=INPUT
 T 44050 47000 5 10 1 1 180 0 1
-netname=TDI
+net=TDI:1
 }
 C 43150 46300 1 0 0 gnd-1.sym
 C 40475 47600 1 270 0 gnd-1.sym
@@ -344,21 +346,21 @@ C 45100 43500 1 0 0 input-1.sym
 T 45100 43800 5 10 0 0 0 0 1
 device=INPUT
 T 45100 43500 5 10 1 1 0 0 1
-netname=TCK
+net=TCK:1
 }
 C 45100 42900 1 0 0 input-1.sym
 {
 T 45100 43200 5 10 0 0 0 0 1
 device=INPUT
 T 45100 42900 5 10 1 1 0 0 1
-netname=TDO
+net=TDO:1
 }
 C 45100 43200 1 0 0 input-1.sym
 {
 T 45100 43500 5 10 0 0 0 0 1
 device=INPUT
 T 45100 43200 5 10 1 1 0 0 1
-netname=TMS
+net=TMS:1
 }
 N 45900 40900 44850 40900 4
 C 45150 40100 1 90 0 input-1.sym
@@ -366,7 +368,7 @@ C 45150 40100 1 90 0 input-1.sym
 T 44850 40100 5 10 0 0 90 0 1
 device=INPUT
 T 45150 40100 5 10 1 1 90 0 1
-netname=RST
+net=RST:1
 }
 C 41650 46700 1 90 0 vcc-1.sym
 C 45100 42600 1 0 0 input-1.sym
@@ -374,7 +376,7 @@ C 45100 42600 1 0 0 input-1.sym
 T 45100 42900 5 10 0 0 0 0 1
 device=INPUT
 T 45100 42600 5 10 1 1 0 0 1
-netname=TDI
+net=TDI:1
 }
 C 47700 45500 1 180 0 gnd-1.sym
 N 47600 45200 47600 44800 4
@@ -529,3 +531,18 @@ N 52000 40300 52775 40300 4
 N 52000 43300 52775 43300 4
 N 52775 43300 52775 40300 4
 N 49400 44800 49400 45200 4
+N 41500 39200 41500 40900 4
+N 41500 40900 41525 40900 4
+T 40600 38200 9 10 1 0 0 0 2
+Route 50ohm impedance 
+between balun and antenna
+B 40000 37800 3300 1900 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+C 42600 39600 1 180 0 pad_analog.sym
+{
+T 42100 38769 5 10 1 1 180 0 1
+refdes=P1
+T 41700 39500 5 8 0 0 180 0 1
+device=pad
+T 42600 39600 5 10 0 0 0 0 1
+footprint=2450AT18A0150.fp
+}
