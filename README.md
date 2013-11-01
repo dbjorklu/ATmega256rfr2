@@ -11,7 +11,7 @@
 
 * Configure gEDA
 
-Enable automatic numbering in gschem by adding the following to .gEDA/gschemrc
+Enable automatic numbering in gschem by adding the following to ~/.gEDA/gschemrc
 
 ```
 (load (string-append geda-data-path "/scheme/auto-uref.scm")) ; load the autonumbering script
@@ -19,7 +19,7 @@ Enable automatic numbering in gschem by adding the following to .gEDA/gschemrc
 (add-hook! copy-component-hook auto-uref)      ; autonumber when copying a component
 ```
 
-Add folder that contains symbols to .gEDA/gafrc so you can find them in gschem and use them with gsch2pcb:
+Add folder that contains symbols to ~/.gEDA/gafrc so you can find them in gschem and use them with gsch2pcb:
 
 ```
 (component-library "symbols/sym/")
